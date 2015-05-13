@@ -1,3 +1,10 @@
+# To try phabricator out in the container:
+# * Log in as root
+# * Copy the phabricator dir from the /nix/store to a location of your choice
+# * cd into the folder and call
+# `php -S 0.0.0.0:3001 -t phabricator/webroot/ phabricator/webroot/index.php`
+# * Phabricator's unresolved issues system will walk you through initializing
+# the data base and starting the deamons.
 
 services = {
   mysql.enable  = true;
