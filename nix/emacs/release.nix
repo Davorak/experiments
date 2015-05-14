@@ -1,3 +1,5 @@
+# Standard nixpkgs location for emacs packages is currently:
+# pkgs.emacs24Packages
 let pkgs = import <nixpkgs> {};
     callPackageEmacs = pkgs.newScope pkgs.emacs24Packages;
     emacsEvil = callPackageEmacs ./evil {};
@@ -21,21 +23,7 @@ let pkgs = import <nixpkgs> {};
                 dash
                 markdown-mode
                 idris-mode
-#                pkgs.emacs24Packages.flycheck
                 pkgs.emacs24Packages.js2
-#                pkgs.emacs24Packages.idris
-#                pkgs.emacs24Packages.coffee
-#                pkgs.emacs24Packages.jade
-#                pkgs.emacs24Packages.php
-#                pkgs.emacs24Packages.idris
-#                pkgs.emacs24Packages.org
-/*
-                pkgs.emacs24Packages.haskellMode_head
-                pkgs.emacs24Packages.structuredHaskellMode
-                pkgs.emacs24Packages.idris
-
-                pkgs.emacs24Packages.magit
-*/
               ];
     };
 in myEmacs
