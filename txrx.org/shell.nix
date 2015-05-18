@@ -28,7 +28,7 @@ pkgs.stdenv.mkDerivation {
 #    echo "Remove virtualenv if it exists"
 #    rm -r nixShellVirtualEnv
   shellHook = ''
-    echo "Creat new python virtualenv"
+    echo "Create new python virtualenv"
     virtualenv nixShellVirtualEnv14
     source nixShellVirtualEnv14/bin/activate
 
