@@ -1,5 +1,10 @@
 # This uses nix-shell to install the major pacakges but lets virtualenv and pip
 # take care of everything in the config/requirments.txt file.
+#
+# This can be placed in the same directory as the cloned txrx.org repo and run
+# with nix-shell
+#
+# txrx.org repo https://github.com/chriscauley/txrx.org
 { pkgs ? (import <nixpkgs> {}).pkgs }:
 
 let
