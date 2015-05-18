@@ -14,7 +14,7 @@ let
 in
 
 pkgs.stdenv.mkDerivation {
-  name = "hello-world-wide-web";
+  name = "nixShell.txrx.org";
   buildInputs = [
 
     pythonPackages.python
