@@ -247,6 +247,29 @@
 (define-key global-map "\C-ca" 'org-agenda)
 (setq org-log-done t)
 
+;; global org todo
+(setq org-agenda-files
+      (list "~/org/todos/misc.org"
+	    "~/org/todos/nix.org"
+	    "~/org/todos/nixops.org"
+	    "~/org/todos/phab.org"
+	    "~/org/todos/phab.org"
+	    ""))
+
 (require 'idris-mode)
 (define-key idris-prover-script-mode-map (kbd "M-n") 'idris-prover-script-forward)
 (define-key idris-prover-script-mode-map (kbd "M-p") 'idris-prover-script-backward)
+(custom-set-variables
+ ;; custom-set-variables was added by Custom.
+ ;; If you edit it by hand, you could mess it up, so be careful.
+ ;; Your init file should contain only one such instance.
+ ;; If there is more than one, they won't work right.
+ '(org-agenda-files
+   (quote
+    ("~/org/todos/nix.org" "~/org/todos/nixops.org" "~/org/todos/phab.org" "~/org/todos/phab.org" "/home/pjw/org/todos/nix.org" "/home/pjw/org/todos/nixops.org" "/home/pjw/org/todos/phab.org"))))
+(custom-set-faces
+ ;; custom-set-faces was added by Custom.
+ ;; If you edit it by hand, you could mess it up, so be careful.
+ ;; Your init file should contain only one such instance.
+ ;; If there is more than one, they won't work right.
+ )
