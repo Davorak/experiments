@@ -2,6 +2,7 @@ import React from 'react';
 import App from './App';
 
 import DefaultApp from './DefaultApp';
+import NotDefaultApp from './NotDefaultApp';
 
 import LoggedIn from './LoggedIn';
 
@@ -12,7 +13,8 @@ var routes = (
     <DefaultRoute handler={DefaultApp} />
     <Route handler={DefaultApp} path="hi" />
     <Route handler={LoggedIn}>
-      <Route name="nestedTesting" handler={DefaultApp} path="hi" />
+      <DefaultRoute handler={NotDefaultApp} />
+      <Route handler={NotDefaultApp} path="hi" />
     </Route>
   </Route>
 );
