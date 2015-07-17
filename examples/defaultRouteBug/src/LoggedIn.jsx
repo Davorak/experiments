@@ -5,11 +5,7 @@ import { RouteHandler } from 'react-router';
 import NotDefaultApp  from './NotDefaultApp';
 
 const LoggedIn = React.createClass({
-  contextTypes: {
-    router: React.PropTypes.func
-  },
   render: function () {
-//    const path = this.context.router.getCurrentPath();
     var Route;
     if (false) {
       Route = <RouteHandler />;
@@ -18,7 +14,8 @@ const LoggedIn = React.createClass({
     }
     return (
       <div>
-        {Route}
+        <p>In LoggedIn</p>
+        <RouteHandler />
       </div>
     );
   }
