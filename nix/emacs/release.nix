@@ -26,6 +26,7 @@ let pkgs = import /home/pjw/.nix-defexpr/channels/nixpkgs {};
                 idris-mode
                 pkgs.emacs24Packages.js2
                 pkgs.emacs24Packages.haskellMode
+                pkgs.emacs24Packages.magit
               ];
     };
 in myEmacs

@@ -1,5 +1,4 @@
 
-
 (setq-default line-number-mode t) ;; display line number in infobar
 (setq-default column-number-mode t) ;; display col number in infobar
 
@@ -224,7 +223,6 @@
 
 
 
-;; (require 'haskell-mode-autoloads)
 
 ;;(define-key haskell-mode-map (kbd "M-[") 'haskell-mode-tag-find)
 
@@ -246,6 +244,8 @@
 (define-key global-map "\C-cl" 'org-store-link)
 (define-key global-map "\C-ca" 'org-agenda)
 (setq org-log-done t)
+(setq org-src-fontify-natively t)
+(setq org-src-preserve-indentation t)
 
 ;; global org todo
 (setq org-agenda-files
@@ -273,3 +273,16 @@
  ;; Your init file should contain only one such instance.
  ;; If there is more than one, they won't work right.
  )
+
+
+(require 'haskell-mode)
+(require 'haskell-font-lock)
+;; (require 'hi2)
+(add-hook 'haskell-mode-hook 'turn-on-hi2)
+(add-hook 'haskell-mode-hook 'turn-on-haskell-doc-mode)
+(add-hook 'haskell-mode-hook 'turn-on-haskell-indentation)
+(require 'haskell-mode-autoloads)
+
+
+(require 'magit)
+(global-set-key (kbd "C-x g") 'magit-status)
