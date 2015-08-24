@@ -18,7 +18,11 @@
 ;; Never have to type 'yes' or 'no' fully
 (defalias 'yes-or-no-p 'y-or-n-p)
 
-;; (setq-default ispell-program-name "aspell")
+(setq-default ispell-program-name "aspell")
+;; (setq ispell-personal-dictionary "/home/pjw/.nix-profile/lib/aspell/en_US.multi")
+;; (setq ispell-personal-dictionary "/home/pjw/.nix-profile/lib/aspell/en-common.rws")
+(setq ispell-dictionary "en")
+;; (setq ispell-dictionary "/home/pjw/.nix-profile/lib/aspell/en_US.multi")
 ;; (setq ispell-dictionary "/nix/store/ar7m3ghvb9ccvpyg5yy97ng51993cn4y-aspell-dict-en-7.1-0/lib/aspell/en_US.multi")
 
 (autoload 'markdown-mode "markdown-mode"
@@ -256,6 +260,8 @@
 	    "~/org/todos/phab.org"
 	    ""))
 
+(add-hook 'org-mode-hook 'turn-on-flyspell)
+
 (require 'idris-mode)
 (define-key idris-prover-script-mode-map (kbd "M-n") 'idris-prover-script-forward)
 (define-key idris-prover-script-mode-map (kbd "M-p") 'idris-prover-script-backward)
@@ -286,3 +292,4 @@
 
 (require 'magit)
 (global-set-key (kbd "C-x g") 'magit-status)
+(add-hook 'git-commit-mode-hook 'turn-on-flyspell) 
