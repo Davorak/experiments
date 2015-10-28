@@ -27,10 +27,22 @@ class Counter extends Component {
   }
 }
 
+const sassLoader = require('sass-variables-loader');
+
+const sass = `
+ $silver: #bdc2ca;
+ $silver2: #ddc2ca;
+`;
+
+const loadedSass = JSON.parse(sassLoader(sass).replace(/module\.exports = ([^;]+);/, (_, m) => m));
+
 export class App extends Component {
   render() {
     return (
       <div>
+        {JSON.stringify(loadedSass)}
+        <br />
+        {loadedSass.silver2}
         <Counter increment={1} color={NICE} />
         <Counter increment={5} color={SUPER_NICE} />
       </div>
